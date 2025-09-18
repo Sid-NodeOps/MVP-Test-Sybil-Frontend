@@ -20,7 +20,7 @@ const WalletChecker = () => {
     }
 
     try {
-      const response = await fetch('https://sybil-backend.build001.nodeops.network/check_wallets', {
+      const response = await fetch('https://localhost:8000/check_wallets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
