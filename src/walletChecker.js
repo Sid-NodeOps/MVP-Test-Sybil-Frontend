@@ -46,7 +46,7 @@ const WalletChecker = () => {
 
   return (
     <div style={{ 
-      background: 'linear-gradient(135deg, #1a1a1a, #2b2b2b)', 
+      background: 'linear-gradient(135deg, #1a1a1a, #4719a2ff)', 
       color: 'white', 
       minHeight: '100vh', 
       padding: '40px', 
