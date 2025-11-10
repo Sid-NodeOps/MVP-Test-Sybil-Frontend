@@ -20,13 +20,13 @@ const WalletChecker = () => {
     }
 
     try {
-      const response = await fetch('https://mvp-sybil-be.autogen.nodeops.network/check_wallets', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ wallets: walletArray }),
-      });
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/check_wallets`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ wallets: walletArray }),
+    });
 
       if (!response.ok) {
         throw new Error("Something went wrong with the request.");
