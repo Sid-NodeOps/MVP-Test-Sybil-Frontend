@@ -20,7 +20,7 @@ const WalletChecker = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/check_wallets`, {
+      const response = await fetch(`https://demo-backend.autogen.nodeops.network/check_wallets`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,11 +45,11 @@ const WalletChecker = () => {
   };
 
   return (
-    <div style={{ 
-      background: 'linear-gradient(135deg, #1a1a1a, #be174fff)', 
-      color: 'white', 
-      minHeight: '100vh', 
-      padding: '40px', 
+    <div style={{
+      background: 'linear-gradient(135deg, #1a1a1a, #be174fff)',
+      color: 'white',
+      minHeight: '100vh',
+      padding: '40px',
       fontFamily: '"Roboto", "Segoe UI", sans-serif', // Rounded and modern font
       display: 'flex',
       flexDirection: 'column',
@@ -71,7 +71,7 @@ const WalletChecker = () => {
           style={{ marginBottom: '20px' }}
           InputProps={{
             style: {
-              backgroundColor: '#333', 
+              backgroundColor: '#333',
               color: 'white',
               borderRadius: '10px',
               boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
@@ -79,7 +79,7 @@ const WalletChecker = () => {
             },
           }}
           InputLabelProps={{
-            style: { color: '#90e000' }, 
+            style: { color: '#90e000' },
           }}
         />
         <br />
@@ -110,13 +110,13 @@ const WalletChecker = () => {
       )}
 
       {results.length > 0 && (
-        <TableContainer 
-          component={Paper} 
-          style={{ 
-            marginTop: '30px', 
-            backgroundColor: '#2c2c2c', 
-            maxWidth: '600px', 
-            width: '100%', 
+        <TableContainer
+          component={Paper}
+          style={{
+            marginTop: '30px',
+            backgroundColor: '#2c2c2c',
+            maxWidth: '600px',
+            width: '100%',
             maxHeight: '400px', // Set a fixed height for the table
             overflowY: 'auto'  // Enable scrolling if content exceeds height
           }}
